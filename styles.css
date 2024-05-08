@@ -1,0 +1,12 @@
+body{
+    background-color: aqua;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+    text-align: center;
+}
