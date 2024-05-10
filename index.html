@@ -14,7 +14,7 @@
   </head>
   <body>
     <h1>Sistema de cadastro</h1>
-    <form>
+    <form onsubmit="lidarComFormulario()">
         <label for="nome">Nome completo</label>
         <input id="nome" type="text" name="nome" placeholder="Digite seu nome" />
 
@@ -37,5 +37,68 @@
 
         <button type="submit">Enviar formulario</button>
     </form>
+
+    <script>
+      function lidarComFormulario() {
+        
+        var nome = document.getElementById('nome').value;
+
+
+        if(nome == ''){
+          alert('Nome não pode ser vazio');
+          return;
+        }
+
+        console.log(nome);
+
+        var CPF = document.getElementById('cpf').value;
+
+        if(CPF == ''){
+          alert('CPF não pode ser vazio');
+          return;
+        }
+
+
+        console.log(CPF);
+
+        var datan = document.getElementById('data_nascimento').value;
+
+        if(datan == ''){
+          alert('Data de Nascimento não pode ser vazio');
+          return;
+        }
+
+        console.log(datan);
+
+        var email = document.getElementById('email').value;
+
+        if(email == ''){
+          alert('Email não pode ser vazio');
+          return;
+        }
+
+        console.log(email);
+
+        var senha = document.getElementById('senha').value;
+
+        if(senha == ''){
+          alert('Senha não pode ser vazio');
+          return;
+        }
+
+        if(senha.length < 8){
+          alert('Senha deve ter 8 ou mais digitos');
+          return;
+        }
+
+        console.log(senha);
+
+
+        alert('Formulário enviado com sucesso!');
+      }
+
+     
+
+    </script>
   </body>
 </html>
